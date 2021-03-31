@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <Version>0.1.1</Version>
+    <Product>Kentico Xperience Xpandable section</Product>
+    <Authors>Yuriy Sountsov</Authors>
+    <PackageId>KenticoXperience.AspNetCore.XpandableSection</PackageId>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageOutputPath>../</PackageOutputPath>
+    <PackageIcon>Icon.png</PackageIcon>
+    <PackageTags>kentico xperience section api</PackageTags>
+    <Description>A zero-config xpandable section for Kentico Xperience 13.</Description>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);XpandableSection</TargetsForTfmSpecificBuildOutput>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" PrivateAssets="all" />
+    <ProjectReference Include="..\XpandableSection\XpandableSection.csproj" PrivateAssets="all" />
+    <None Include="Icon.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+  
+  <Target Name="XpandableSection">
+    <ItemGroup>
+      <BuildOutputInPackage Include="$(OutputPath)XpandableSection.dll" />
+    </ItemGroup>
+  </Target>
+
+</Project>

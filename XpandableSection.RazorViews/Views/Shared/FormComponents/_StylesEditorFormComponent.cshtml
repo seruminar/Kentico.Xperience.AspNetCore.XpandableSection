@@ -1,0 +1,23 @@
+﻿@using Microsoft.Extensions.Logging
+
+@using XpandableSection.FormComponents
+@using XpandableSection.Localization
+
+@model StylesEditorFormComponent
+
+@{ 
+    var resourcesStore = new ResourcesStore(Context.RequestServices.GetService(typeof(ILoggerFactory)) as ILoggerFactory);
+    var resources = resourcesStore.GetResources(typeof(Resources), "en-us");
+
+    var resourcesJson = Json.Serialize(resources);
+}
+
+<div id="styleEditorRoot">
+  @Html.HiddenFor(model => model.Styles, new { id = "styleEditorStyles" })
+  @Html.HiddenFor(model => resourcesJson, new { id = "styleEditorResources" })
+</div>
+
+<script src=@Url.Action( "Get", "XpandableSection", new { resourceName = "stylesEditorClient.js" })
+        type="text/javascript"></script>
+<link href=@Url.Action("Get", "XpandableSection", new { resourceName = "stylesEditorClient.css" })
+      rel="stylesheet" />

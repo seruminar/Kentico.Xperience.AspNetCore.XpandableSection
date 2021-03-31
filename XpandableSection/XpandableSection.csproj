@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Remove="FormComponents\StylesEditorFormComponent\**" />
+    <Compile Remove="FormComponents\XpandableSectionFormComponent\**" />
+    <EmbeddedResource Remove="FormComponents\StylesEditorFormComponent\**" />
+    <EmbeddedResource Remove="FormComponents\XpandableSectionFormComponent\**" />
+    <None Remove="FormComponents\StylesEditorFormComponent\**" />
+    <None Remove="FormComponents\XpandableSectionFormComponent\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="FormComponents\components\**" />
+    <None Remove="Sections\xpandableSection.css" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="FormComponents\components\**" />
+    <EmbeddedResource Include="Sections\xpandableSection.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Kentico.Xperience.AspNetCore.WebApp" Version="13.0.15" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.8" />
+  </ItemGroup>
+
+</Project>

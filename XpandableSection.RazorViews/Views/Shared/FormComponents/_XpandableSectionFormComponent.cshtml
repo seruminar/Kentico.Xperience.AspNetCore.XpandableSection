@@ -1,0 +1,23 @@
+﻿@using Microsoft.Extensions.Logging
+
+@using XpandableSection.FormComponents
+@using XpandableSection.Localization
+
+@model XpandableSectionFormComponent
+
+@{ 
+    var resourcesStore = new ResourcesStore(Context.RequestServices.GetService(typeof(ILoggerFactory)) as ILoggerFactory);
+    var resources = resourcesStore.GetResources(typeof(Resources), "en-us");
+
+    var resourcesJson = Json.Serialize(resources);
+}
+
+<div id="xpandableSectionRoot">
+  @Html.HiddenFor(model => model.Json, new { id = "xpandableSectionData" })
+  @Html.HiddenFor(model => resourcesJson, new { id = "xpandableSectionResources" })
+</div>
+
+<script src=@Url.Action( "Get", "XpandableSection", new { resourceName = "xpandableSectionClient.js" })
+        type="text/javascript"></script>
+<link href=@Url.Action("Get", "XpandableSection", new { resourceName = "xpandableSectionClient.css" })
+      rel="stylesheet" />

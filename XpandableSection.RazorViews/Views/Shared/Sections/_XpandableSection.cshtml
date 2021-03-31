@@ -1,0 +1,55 @@
+﻿@using System.Text.RegularExpressions
+
+@using Kentico.PageBuilder.Web.Mvc
+
+@using XpandableSection.Sections
+@using XpandableSection.Models
+@using XpandableSection.Controllers
+
+@using Newtonsoft.Json
+
+@addTagHelper *, Kentico.Content.Web.Mvc
+
+@model ComponentViewModel<XpandableSectionProperties>
+@{
+  async Task RenderSectionsRecursively(Section section, int depth, int index)
+  {
+    var name = Regex.Replace(Html.Encode(section.Name), "[^a-zA-Z0-9_-]", "-");
+    var depthString = $"depth{depth}";
+    var indexString = $"index{index}";
+
+    @if (section.Sections == null)
+    {
+      <div class="@(string.Join(" ", "layout", name, depthString, indexString))">
+        <div class="zone">
+          <widget-zone />
+        </div>
+      </div>
+    }
+    else
+    {
+      <div class="@(string.Join(" ", section.Direction.ToString().ToLower(), name, depthString, indexString))">
+        @for (var sectionIndex = 0; sectionIndex < section.Sections.Count; sectionIndex++)
+        {
+          await RenderSectionsRecursively(section.Sections[sectionIndex], depth + 1, sectionIndex);
+        }
+      </div>
+    }
+  }
+}
+
+<link href=@Url.Action("Get", "XpandableSection", new { resourceName = "xpandableSection.css" }) rel="stylesheet" />
+
+@{
+    if (!string.IsNullOrWhiteSpace(Model.Properties.Styles))
+    {
+      var name = XpandableSectionController.Create(JsonConvert.DeserializeObject<string>(Model.Properties.Styles), "css");
+
+      <link href=@Url.Action("Get", "XpandableSection", new { resourceName = $"{name}.css" }) rel="stylesheet" />
+    }
+}
+
+<div class="xpandable">
+  @{ await RenderSectionsRecursively(JsonConvert.DeserializeObject<Section>(Model.Properties.Json), 0, 0); }
+</div>
+

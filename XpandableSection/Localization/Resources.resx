@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="xpandablesection.section" xml:space="preserve">
+    <value>Xpandable section</value>
+  </data>
+  <data name="xpandablesection.layout" xml:space="preserve">
+    <value>Section layout</value>
+  </data>
+  <data name="xpandablesection.formcomponent" xml:space="preserve">
+    <value>Xpandable section form component</value>
+  </data>
+  <data name="xpandablesection.widgetzone" xml:space="preserve">
+    <value>widget zone</value>
+  </data>
+  <data name="xpandablesection.add" xml:space="preserve">
+    <value>Add a new zone</value>
+  </data>
+  <data name="xpandablesection.remove" xml:space="preserve">
+    <value>Remove this zone</value>
+  </data>
+  <data name="xpandablesection.cancelremove" xml:space="preserve">
+    <value>Cancel removing this zone</value>
+  </data>
+  <data name="xpandablesection.confirmremove" xml:space="preserve">
+    <value>Confirm removing this zone</value>
+  </data>
+  <data name="xpandablesection.removemessage" xml:space="preserve">
+    <value>Warning! Widgets in this zone may get lost or moved.</value>
+  </data>
+  <data name="xpandablesection.name" xml:space="preserve">
+    <value>Name...</value>
+  </data>
+  <data name="xpandablesection.direction" xml:space="preserve">
+    <value>Change direction</value>
+  </data>
+  <data name="xpandablesection.styles" xml:space="preserve">
+    <value>Custom styles</value>
+  </data>
+  <data name="xpandablesection.stylesexplanation" xml:space="preserve">
+    <value>Enter valid CSS that matches the section layout you have defined. The section is contained in an element with class 'xpandable'. For example, if a widget zone is named 'col4', you can write a rule selecting '.xpandable .col4'.</value>
+  </data>
+</root>

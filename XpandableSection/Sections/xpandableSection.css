@@ -1,0 +1,40 @@
+﻿.xpanded.ktc-form-wrapper .ktc-form .ktc-form-group .ktc-field-wrapper {
+  display: flex;
+}
+
+.xpanded.ktc-form-wrapper .ktc-form .ktc-form-group .ktc-field-wrapper .ktc-editing-form-label-cell {
+  width: fit-content;
+}
+
+.xpanded.ktc-form-wrapper .ktc-form .ktc-form-group .ktc-field-wrapper .ktc-editing-form-value-cell {
+  flex: 1;
+}
+
+.xpanded.ktc-form-wrapper .ktc-form .ktc-form-group .ktc-field-wrapper .ktc-editing-form-value-cell .ktc-explanation-text {
+  max-width: initial;
+}
+
+.xpandable .layout .ktc-widget-zone {
+  min-height: 100%;
+}
+
+.xpandable .horizontal {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.xpandable .vertical {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+  .xpandable .layout {
+    flex: 1;
+    display: flex;
+  }
+
+    .xpandable .layout > div {
+      flex: 1;
+    }
