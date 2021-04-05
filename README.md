@@ -11,7 +11,9 @@ This repository contains the source code for the section and its form component.
 
 ## Description
 
-This is a Kentico Xperience 13 section that allows editors to create any section layout that they want, with no code or configuration. By adding the section to a page, an editor can open the section properties and add widget zones and name them (for CSS). The editor can also change the direction (horizontal or vertical).
+This is a Kentico Xperience 13 section that allows editors to create any section layout that they want, with no code or configuration. By adding the section to a page, an editor can open the section properties and add widget zones.
+
+The editor can name each widget zone or group of zones and change the direction (horizontal or vertical). The editor can also add CSS. To make it easy to target a specific widget zone, the direction, name, depth, and index of each widget zone show up as HTML classes.
 
 ## Requirements and prerequisites
 
@@ -21,7 +23,7 @@ This is a Kentico Xperience 13 section that allows editors to create any section
 ## Installation
 
 1. Use Visual Studio to open the solution with your MVC project.
-1. In the **NuGet Package Manager Console**, run `Install-Package Kentico.Xperience.AspNetCore.XpandableSection`.
+1. In the **NuGet Package Manager Console**, run `Install-Package KenticoXperience.AspNetCore.XpandableSection`.
 1. Build and run in IIS Express, or publish the project to local IIS.
 1. Run the Kentico Xperience 13 administration and open **Pages**.
 1. Navigate to a page with the page builder feature.
